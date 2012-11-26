@@ -577,68 +577,66 @@ implements org.apache.jasper.runtime.JspSourceDependent {
 			out = pageContext.getOut();
 			_jspx_out = out;
 			
-//			if(request.getAttribute("ret").equals("home"))
+			if(request.getAttribute("ret") == request.getAttribute("ret2"))
+			{
+				session.setAttribute("cucu", "bla");
+				out.print("super");
+			}
+			else
+			{
+				out.print("nasol");
+			}
+			
+//			if(request.getAttribute("bla").equals("cucu"))
 //			{
-//				session.setAttribute("cucu", "bla");
 //				out.print("super");
 //			}
 //			else
 //			{
 //				out.print("nasol");
 //			}
-//			
-//			if(request.getAttribute("ret").equals("home"))
-//			{
-//				out.print("super");
+			
+
+
+//			boolean bDebug = false;
+//
+//			String sAction = "";//getParam( request, "FormAction");
+//			String sForm = getParam( request, "FormName");
+//			String sLoginErr = "";
+//
+//			java.sql.Connection conn = null;
+//			java.sql.Statement stat = null;
+//			String sErr = loadDriver();
+//			conn = cn();
+//			stat = conn.createStatement();
+//			if ( ! sErr.equals("") ) {
+//				try {
+//					out.println(sErr);
+//				}
+//				catch (Exception e) {}
 //			}
-//			else
-//			{
-//				out.print("nasol");
+//			if ( sForm.equals("Login") ) {
+//				sLoginErr = LoginAction(request, response, session, out, sAction, sForm, conn, stat);
+//				if ( "sendRedirect".equals(sLoginErr)) return;
 //			}
-//			for(int i =0;i<5;i++)
-//				out.print(i);
-
-
-
-			boolean bDebug = false;
-
-			String sAction = "";//getParam( request, "FormAction");
-			String sForm = getParam( request, "FormName");
-			String sLoginErr = "";
-
-			java.sql.Connection conn = null;
-			java.sql.Statement stat = null;
-			String sErr = loadDriver();
-			conn = cn();
-			stat = conn.createStatement();
-			if ( ! sErr.equals("") ) {
-				try {
-					out.println(sErr);
-				}
-				catch (Exception e) {}
-			}
-			if ( sForm.equals("Login") ) {
-				sLoginErr = LoginAction(request, response, session, out, sAction, sForm, conn, stat);
-				if ( "sendRedirect".equals(sLoginErr)) return;
-			}
-
-
-			out.write("            \r\n<html>\r\n<head>\r\n<title>Book Store</title>\r\n<meta name=\"GENERATOR\" content=\"YesSoftware CodeCharge v.1.2.0 / JSP.ccp build 05/21/2001\"/>\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n</head>\r\n<body style=\"background-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helveticabackground-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helvetica\">\r\n");
-			org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "Header.jsp", out, true);
-			out.write("<center>\r\n <table>\r\n  <tr>\r\n   \r\n   <td valign=\"top\">\r\n");
-			//Login_Show(request, response, session, out, sLoginErr, sForm, sAction, conn, stat); 
-			out.write("\r\n    guest/guest<br>\r\nadmin/admin\r\n   </td>\r\n  </tr>\r\n </table>\r\n\r\n");
-			org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "Footer.jsp", out, true);
-			out.write("\r\n<center><font face=\"Arial\"><small>This dynamic site was generated with <a href=\"http://www.codecharge.com\">CodeCharge</a></small></font></center>\r\n</body>\r\n</html>\r\n");
-
-			out.write('\r');
-			out.write('\n');
-
-			if ( stat != null ) stat.close();
-			if ( conn != null ) conn.close();
-
-			out.write('\r');
-			out.write('\n');
+//
+//
+//			out.write("            \r\n<html>\r\n<head>\r\n<title>Book Store</title>\r\n<meta name=\"GENERATOR\" content=\"YesSoftware CodeCharge v.1.2.0 / JSP.ccp build 05/21/2001\"/>\r\n<meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n<meta http-equiv=\"expires\" content=\"0\"/>\r\n<meta http-equiv=\"cache-control\" content=\"no-cache\"/>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\r\n</head>\r\n<body style=\"background-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helveticabackground-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helvetica\">\r\n");
+//			org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "Header.jsp", out, true);
+//			out.write("<center>\r\n <table>\r\n  <tr>\r\n   \r\n   <td valign=\"top\">\r\n");
+//			//Login_Show(request, response, session, out, sLoginErr, sForm, sAction, conn, stat); 
+//			out.write("\r\n    guest/guest<br>\r\nadmin/admin\r\n   </td>\r\n  </tr>\r\n </table>\r\n\r\n");
+//			org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "Footer.jsp", out, true);
+//			out.write("\r\n<center><font face=\"Arial\"><small>This dynamic site was generated with <a href=\"http://www.codecharge.com\">CodeCharge</a></small></font></center>\r\n</body>\r\n</html>\r\n");
+//
+//			out.write('\r');
+//			out.write('\n');
+//
+//			if ( stat != null ) stat.close();
+//			if ( conn != null ) conn.close();
+//
+//			out.write('\r');
+//			out.write('\n');
 		} catch (Throwable t) {
 			if (!(t instanceof SkipPageException)){
 				out = _jspx_out;
