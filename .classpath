@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="lib/jasper.jar"/>
 	<classpathentry kind="lib" path="lib/jsp-api.jar"/>
 	<classpathentry kind="lib" path="lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="lib/tomcat-api.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
