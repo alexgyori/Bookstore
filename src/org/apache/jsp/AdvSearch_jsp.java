@@ -536,8 +536,7 @@ static final String sFileName = "AdvSearch.jsp";
       out = pageContext.getOut();
       _jspx_out = out;
 
-      out.write('\r');
-      out.write('\n');
+      
 
 
 boolean bDebug = false;
@@ -589,14 +588,11 @@ if ( ! sErr.equals("") ) {
       out.write("</body>\r\n");
       out.write("</html>\r\n");
 
-      out.write('\r');
-      out.write('\n');
 
 if ( stat != null ) stat.close();
 if ( conn != null ) conn.close();
 
-      out.write('\r');
-      out.write('\n');
+ 
     } catch (java.lang.Throwable t) {
       if (!(t instanceof javax.servlet.jsp.SkipPageException)){
         out = _jspx_out;
