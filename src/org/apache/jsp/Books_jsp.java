@@ -873,7 +873,8 @@ sSQL="select count(item_id) as i_item_id from items as i";
       getRecordToHash( rs, rsHash, aFields );
       String flditem_id = (String) rsHash.get("i_item_id");
 
-      out.print("     <tr>\n      <td style=\"background-color: #FFFFFF; border-style: inset; border-width: 0\"><font style=\"font-size: 10pt; color: #CE7E00; font-weight: bold\">Items found:</font> </td><td style=\"background-color: #FFFFFF; border-width: 1\">"); out.print("<font style=\"font-size: 10pt; color: #000000\">"+toHTML(flditem_id)+"&nbsp;</font>");
+      out.print("     <tr>\n      <td style=\"background-color: #FFFFFF; border-style: inset; border-width: 0\"><font style=\"font-size: 10pt; color: #CE7E00; font-weight: bold\">Items found:</font> </td><td style=\"background-color: #FFFFFF; border-width: 1\">"); 
+      out.print("<font style=\"font-size: 10pt; color: #000000\">"+toHTML(flditem_id)+"&nbsp;</font>");
       out.println("</td>\n     </tr>");
       out.println("     <tr>\n      <td colspan=\"2\" style=\"background-color: #FFFFFF; border-width: 1\">&nbsp;</td>\n     </tr>");
     
@@ -943,8 +944,7 @@ sSQL="select count(item_id) as i_item_id from items as i";
       out = pageContext.getOut();
       _jspx_out = out;
 
-      out.write('\r');
-      out.write('\n');
+     
 
 
 boolean bDebug = false;
@@ -1022,14 +1022,12 @@ if ( ! sErr.equals("") ) {
       out.write("</body>\r\n");
       out.write("</html>\r\n");
 
-      out.write('\r');
-      out.write('\n');
+     
 
 if ( stat != null ) stat.close();
 if ( conn != null ) conn.close();
 
-      out.write('\r');
-      out.write('\n');
+      
     } catch (java.lang.Throwable t) {
       if (!(t instanceof javax.servlet.jsp.SkipPageException)){
         out = _jspx_out;
